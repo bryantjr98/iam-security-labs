@@ -1,0 +1,6 @@
+# never upload secrets or raw logs
+*.pfx
+*.pem
+*.key
+.env
+lab2-jml-automation/logs/
