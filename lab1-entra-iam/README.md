@@ -13,7 +13,7 @@ Build a secure identity baseline in a lab Entra tenant: MFA, Conditional Access,
 
 ## Conditional Access policies
 | Policy | Purpose | 
-|---|---|---| 
+|---|---|
 | CA001 | Require MFA for all users | 
 | CA002 | Require MFA for admin roles | 
 | CA003 | Block legacy authentication | 
