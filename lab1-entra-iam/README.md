@@ -12,14 +12,14 @@ Build a secure identity baseline in a lab Entra tenant: MFA, Conditional Access,
 - An access package with approval
 
 ## Conditional Access policies
-| Policy | Purpose |
+| Policy | Purpose | Result I observed |
 |---|---|---|
-| CA001 | Require MFA for all users |
-| CA002 | Require MFA for admin roles |
-| CA003 | Block legacy authentication |
-| CA004 | Block non-US sign-ins |
-| CA005 | MFA for risky sign-ins |
-| CA006 | Protect security-info registration |
+| CA001 | Require MFA for all users | 
+| CA002 | Require MFA for admin roles | 
+| CA003 | Block legacy authentication | 
+| CA004 | Block non-US sign-ins | 
+| CA005 | MFA for risky sign-ins | 
+| CA006 | Protect security-info registration | 
 
 ## Evidence
 ![CA001 summary](./screenshots/lab1-06-ca001-summary.png)
