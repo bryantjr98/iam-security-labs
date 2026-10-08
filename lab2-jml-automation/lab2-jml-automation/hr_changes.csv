@@ -1,0 +1,3 @@
+Action,EmployeeId,FirstName,LastName,Department,JobTitle,ManagerEmployeeId,StartDate,NewDepartment,NewTitle
+Move,E1003,,,,,,,Finance,Senior Analyst
+Leave,E1004,,,,,,,,

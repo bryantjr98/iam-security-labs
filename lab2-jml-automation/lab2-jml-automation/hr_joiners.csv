@@ -1,0 +1,6 @@
+Action,EmployeeId,FirstName,LastName,Department,JobTitle,ManagerEmployeeId,StartDate,NewDepartment,NewTitle
+Join,E1000,Maya,Ortiz,IT,IT Manager,,2026-09-01,,
+Join,E1001,Ava,Brooks,Finance,Analyst,E1000,2026-10-12,,
+Join,E1002,Noah,Reyes,IT,Help Desk Tech,E1000,2026-10-12,,
+Join,E1003,Liam,Chen,Clinical,Coordinator,E1000,2026-10-12,,
+Join,E1004,Zoe,Patel,HR,Specialist,E1000,2026-10-12,,
