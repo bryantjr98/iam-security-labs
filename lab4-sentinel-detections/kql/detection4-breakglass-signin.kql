@@ -1,0 +1,3 @@
+SigninLogs
+| where UserPrincipalName in~ ('bg-admin1@yourlab.onmicrosoft.com', 'bg-admin2@yourlab.onmicrosoft.com')
+| project TimeGenerated, UserPrincipalName, IPAddress, AppDisplayName, ResultType

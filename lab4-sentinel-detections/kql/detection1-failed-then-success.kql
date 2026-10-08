@@ -1,0 +1,14 @@
+let failThreshold = 5;
+let successWindow = 15m;
+let fails = SigninLogs
+| where TimeGenerated > ago(1h)
+| where ResultType in ('50126', '50053')
+| summarize Failures = count(), LastFail = max(TimeGenerated) by UserPrincipalName, IPAddress
+| where Failures >= failThreshold;
+SigninLogs
+| where TimeGenerated > ago(1h)
+| where ResultType == '0'
+| project SuccessTime = TimeGenerated, UserPrincipalName, IPAddress
+| join kind=inner fails on UserPrincipalName, IPAddress
+| where SuccessTime > LastFail and SuccessTime - LastFail < successWindow
+| project SuccessTime, UserPrincipalName, IPAddress, Failures, LastFail

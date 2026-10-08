@@ -1,0 +1,5 @@
+SigninLogs
+| where TimeGenerated > ago(1h)
+| where ResultType == '50126'
+| summarize MFAFailures = count(), Apps = make_set(AppDisplayName), IPs = make_set(IPAddress) by UserPrincipalName, bin(TimeGenerated, 15m)
+| where MFAFailures >= 3

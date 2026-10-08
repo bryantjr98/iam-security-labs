@@ -1,0 +1,6 @@
+AuditLogs
+| where TimeGenerated > ago(1d)
+| where Category == 'RoleManagement'
+| where OperationName startswith 'Add member to role' or OperationName startswith 'Add eligible member to role'
+| extend Actor = tostring(InitiatedBy.user.userPrincipalName)
+| project TimeGenerated, OperationName, Actor, Result, TargetResources
